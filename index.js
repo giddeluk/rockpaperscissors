@@ -15,7 +15,7 @@ function getComputerChoice(){
 }
 // Get Human Choice
 function getHumanChoice(){
-    let humanChoice = prompt(`Choose Between "rock","paper" or "scissors"`);
+    let humanChoice = prompt(`Choose Between ROCK,PAPER or SCISSORS`);
     return humanChoice;
 }
 
