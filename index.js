@@ -19,12 +19,21 @@ function getHumanChoice(){
     return humanChoice;
 }
 
-let humanScore = 0;
-let computerScore = 0;
 
-// Play One Round
-function playRound(humanChoice, computerChoice){
-    // Decide the Winner
+// Selections
+const humanSelection = getHumanChoice().toUpperCase();
+const computerSelection = getComputerChoice().toUpperCase();
+
+
+
+// Play Game
+function playGame(){
+    let humanScore = 0;
+    let computerScore = 0;
+
+    // Play One Round
+    function playRound(humanChoice, computerChoice) {
+        // Decide the Winner
         if (humanChoice === computerChoice) {
             console.log(`It's a tie, ${computerChoice} draws ${humanChoice}`);
         }
@@ -55,12 +64,17 @@ function playRound(humanChoice, computerChoice){
         else {
             console.log(`Please Enter Either "ROCK", "PAPER" or "SCISSORS"`);
         }
+    }
+
+    // Execute the Play Round Function 5 Times
+    playRound(humanSelection, computerSelection);
+    playRound(humanSelection, computerSelection);
+    playRound(humanSelection, computerSelection);
+    playRound(humanSelection, computerSelection);
+    playRound(humanSelection, computerSelection);
+
 }
+playGame();
 
-// Selections
-const humanSelection = getHumanChoice().toUpperCase();
-const computerSelection = getComputerChoice().toUpperCase();
 
-// Execute the Play Round Function
-playRound(humanSelection, computerSelection);
 
