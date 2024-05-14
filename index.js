@@ -21,8 +21,8 @@ function getHumanChoice(){
 
 
 // Selections
-const humanSelection = getHumanChoice().toUpperCase();
-const computerSelection = getComputerChoice().toUpperCase();
+let humanSelection;
+let computerSelection;
 
 
 
@@ -62,19 +62,30 @@ function playGame(){
             humanScore = humanScore + 1;
         }
         else {
-            console.log(`Please Enter Either "ROCK", "PAPER" or "SCISSORS"`);
+            console.log(`Please Enter Either "ROCK", "PAPER" or "SCISSfffORS"`);
         }
+        
     }
 
-    // Execute the Play Round Function 5 Times
-    playRound(humanSelection, computerSelection);
-    playRound(humanSelection, computerSelection);
-    playRound(humanSelection, computerSelection);
-    playRound(humanSelection, computerSelection);
-    playRound(humanSelection, computerSelection);
+
+    for (let i = 0; i < 5; i++) {
+        getComputerChoice();
+        getHumanChoice();
+
+        humanSelection = getHumanChoice().toUpperCase();
+        computerSelection = getComputerChoice().toUpperCase();
+        console.log(humanSelection,computerSelection);
+        playRound(humanSelection, computerSelection);
+
+        console.log(humanScore);
+
+    }
 
 }
+
 playGame();
+
+
 
 
 
