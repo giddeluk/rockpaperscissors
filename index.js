@@ -25,7 +25,6 @@ let computerScore = 0;
 // Play One Round
 function playRound(humanChoice, computerChoice){
     // Decide the Winner
-    let roundWinner = () => {
         if (humanChoice === computerChoice) {
             console.log(`It's a tie, ${computerChoice} draws ${humanChoice}`);
         }
@@ -56,7 +55,6 @@ function playRound(humanChoice, computerChoice){
         else {
             console.log(`Please Enter Either "ROCK", "PAPER" or "SCISSORS"`);
         }
-    };
 }
 
 // Selections
