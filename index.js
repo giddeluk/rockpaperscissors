@@ -13,17 +13,16 @@ function getComputerChoice(){
             return "scissors";
     }
 }
+
 // Get Human Choice
 function getHumanChoice(){
     let humanChoice = prompt(`Choose Between ROCK,PAPER or SCISSORS`);
     return humanChoice;
 }
 
-
-// Selections
+// Selections Initialization
 let humanSelection;
 let computerSelection;
-
 
 
 // Play Game
@@ -62,27 +61,37 @@ function playGame(){
             humanScore = humanScore + 1;
         }
         else {
-            console.log(`Please Enter Either "ROCK", "PAPER" or "SCISSfffORS"`);
+            console.log(`Please Enter Either "ROCK", "PAPER" or "SCISSORS"`);
         }
         
     }
 
-
+    // Play the Round Five Times
     for (let i = 0; i < 5; i++) {
-        getComputerChoice();
-        getHumanChoice();
-
         humanSelection = getHumanChoice().toUpperCase();
         computerSelection = getComputerChoice().toUpperCase();
-        console.log(humanSelection,computerSelection);
+        
         playRound(humanSelection, computerSelection);
-
-        console.log(humanScore);
-
     }
 
+    // Output the Scores
+    console.log(`Human Score- ${humanScore} - ${computerScore} -Computer Score`);
+
+    // Declare the Winner
+    if(humanScore > computerScore){
+        console.log("You Win!");
+    }
+    else if(humanScore < computerScore){
+        console.log("Computer Wins!");
+    }
+    else{
+        console.log("It's a Tie!");
+    }
 }
 
+
+
+// Play the Game
 playGame();
 
 
