@@ -58,9 +58,6 @@ const gameScore = document.querySelector(".gameScore");
 const gameWinner = document.querySelector(".gameWinner");
 const buttonContainer = document.querySelector(".buttonContainer");
 const gameReload = document.querySelector(".gameReload");
-const title = document.querySelector(".title");
-const title2 = document.querySelector(".title2");
-
 
 
 let numberOfGamesPlayed = 0;
@@ -93,25 +90,16 @@ function getComputerChoice(){
         gameResult.textContent = `Congratulations, You WON!`;
         gameScore.textContent = `FINAL RESULT: Human Score- ${humanScore} - ${computerScore} -Computer Score`;
         gameReload.textContent = "THANKS FOR PLAYING, RELOAD THE PAGE TO PLAY AGAIN";
-        title.parentNode.removeChild(title);
-        title2.parentNode.removeChild(title2);
-
     }else if(numberOfGamesPlayed == 5 && humanScore < computerScore){
         buttonContainer.parentNode.removeChild(buttonContainer);
         gameResult.textContent = `Sorry, You LOST!`;
         gameScore.textContent = `FINAL RESULT: Human Score- ${humanScore} - ${computerScore} -Computer Score`;
         gameReload.textContent = "THANKS FOR PLAYING, RELOAD THE PAGE TO PLAY AGAIN";
-        title.parentNode.removeChild(title);
-        title2.parentNode.removeChild(title2);
-
     }else if(numberOfGamesPlayed == 5 && humanScore === computerScore){
         buttonContainer.parentNode.removeChild(buttonContainer);
         gameResult.textContent = `Its a TIE!`;
         gameScore.textContent = `FINAL RESULT: Human Score- ${humanScore} - ${computerScore} -Computer Score`;
         gameReload.textContent = "THANKS FOR PLAYING, RELOAD THE PAGE TO PLAY AGAIN";
-        title.parentNode.removeChild(title);
-        title2.parentNode.removeChild(title2);
-
     }
 });
 
@@ -143,23 +131,16 @@ paperButton.addEventListener("click", () => {
         gameResult.textContent = `Congratulations, You WON!`;
         gameScore.textContent = `FINAL RESULT: Human Score- ${humanScore} - ${computerScore} -Computer Score`;
         gameReload.textContent = "THANKS FOR PLAYING, RELOAD THE PAGE TO PLAY AGAIN";
-        title.parentNode.removeChild(title);
-        title2.parentNode.removeChild(title2);
-
     }else if(numberOfGamesPlayed == 5 && humanScore < computerScore){
         buttonContainer.parentNode.removeChild(buttonContainer);
         gameResult.textContent = `Sorry, You LOST!`;
         gameScore.textContent = `FINAL RESULT: Human Score- ${humanScore} - ${computerScore} -Computer Score`;
         gameReload.textContent = "THANKS FOR PLAYING, RELOAD THE PAGE TO PLAY AGAIN";
-        title.parentNode.removeChild(title);
-        title2.parentNode.removeChild(title2);
     }else if(numberOfGamesPlayed == 5 && humanScore === computerScore){
         buttonContainer.parentNode.removeChild(buttonContainer);
         gameResult.textContent = `Its a TIE!`;
         gameScore.textContent = `FINAL RESULT: Human Score- ${humanScore} - ${computerScore} -Computer Score`;
         gameReload.textContent = "THANKS FOR PLAYING, RELOAD THE PAGE TO PLAY AGAIN";
-        title.parentNode.removeChild(title);
-        title2.parentNode.removeChild(title2);
     }
 });
 
@@ -191,25 +172,17 @@ function getComputerChoice(){
         gameResult.textContent = `Congratulations, You WON!`;
         gameScore.textContent = `FINAL RESULT: Human Score- ${humanScore} - ${computerScore} -Computer Score`;
         gameReload.textContent = "THANKS FOR PLAYING, RELOAD THE PAGE TO PLAY AGAIN";
-        title.parentNode.removeChild(title);
-        title2.parentNode.removeChild(title2);
-
     }else if(numberOfGamesPlayed == 5 && humanScore < computerScore){
         buttonContainer.parentNode.removeChild(buttonContainer);
         gameResult.textContent = `Sorry, You LOST!`;
         gameScore.textContent = `FINAL RESULT: Human Score- ${humanScore} - ${computerScore} -Computer Score`;
         gameReload.textContent = "THANKS FOR PLAYING, RELOAD THE PAGE TO PLAY AGAIN";
-        title.parentNode.removeChild(title);
-        title2.parentNode.removeChild(title2);
-
     }else if(numberOfGamesPlayed == 5 && humanScore === computerScore){
         buttonContainer.parentNode.removeChild(buttonContainer);
         gameResult.textContent = `Its a TIE!`;
         gameScore.textContent = `FINAL RESULT: Human Score- ${humanScore} - ${computerScore} -Computer Score`;
+        alert("Thanks for Playing, Reload the page to play again.");
         gameReload.textContent = "THANKS FOR PLAYING, RELOAD THE PAGE TO PLAY AGAIN";
-        title.parentNode.removeChild(title);
-        title2.parentNode.removeChild(title2);
-
     }
 });
 

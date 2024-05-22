@@ -5,10 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors Game</title>
     <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="nav"><h3>Rock, Paper, Scissors Game</h3></div>
+    <div class="cardContainer">
+        <div class="card">
+            <div class="game">
+                <h3 class="title">Choose Either Rock, Paper, Scissors</h3>
+                <h5 class="title2">First Player to Reach 5 points WINS the Game!</h5>
+                <div class="buttonContainer">
+                    <button class="rockButton"><img src="rock.png">ROCK</button>
+                    <button class="paperButton"><img src="paper.png">PAPER</button>
+                    <button class="scissorsButton"><img src="scissors.png">SCISSORS</button>
+                </div>
+                <div class="gameResultContainer">
+                    <div class="gameResult"></div>
+                    <div class="gameScore"></div>
+                    <div class="gameWinner"></div>
+                    <div class="gameReload"></div>
+                </div>
+            </div>
+        </div>
 
+    </div>
+    <div class="footer"><p>Built by <a href="https://github.com/giddeluk">Giddel</a>, Source Code on <a href="https://github.com/giddeluk/rockpaperscissors">Github</a></p></div>
     <script src="index.js">
 
     </script>
